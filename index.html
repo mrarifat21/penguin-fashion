@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penguin Fashion</title>
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind Custome Fonts -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "primary-color":"#3E3E3E",
+              "heading-color": "#363958"
+            },
+            fontFamily: {
+              roboto: ["Roboto", "serif"],
+              bebas: ["Bebas Neue", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="bg-[#FFFBF0]">
+      <!-- navbar  -->
+      <nav class="flex justify-between pt-5 container mx-auto px-3 md:px-0">
+        <div class="w-3/6 md:w-96">
+          <img
+            class="w-full cursor-pointer"
+            src="asset/icons/logo.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <ul class="hidden md:flex md:justify-between ">
+            <li>
+              <a
+                href="#"
+                class="inline-block mx-3 font-roboto text-base font-semibold text-[#3c3c3c] hover:text-green-700"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="inline-block mx-3 font-roboto text-base font-semibold text-[#3c3c3c] hover:text-green-700"
+                >Product</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="inline-block mx-3 font-roboto text-base font-semibold text-[#3c3c3c] hover:text-green-700"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="inline-block mx-3 font-roboto text-base font-semibold text-[#3c3c3c] hover:text-green-700"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+          <i class="fa-solid fa-bars md:hidden text-2xl"></i>
+        </div>
+      </nav>
+
+      <!-- banner -->
+
+      <section class="container mx-auto my-20 md:flex justify-between items-center px-3 md:px-0">
+        <div class="mb-14 md:mb-0 text-center md:text-left">
+          <h2 class="font-bebas text-6xl md:text-7xl">
+            <span class="text-[#FABE4C]">Be the Penguins</span> <br />
+            <span class="text-heading-color">of Winter</span>
+          </h2>
+          <p class="font-roboto text-primary-color my-2">
+            Lorem Ipsum is simply dummy text of the printing <br />
+            and typesetting industry.
+          </p>
+          <button class="font-roboto font-medium text-white bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl w-44 h-16 hover:from-[#85A019] hover:to-[#A4BC46]" > <i class="fa-solid fa-cart-shopping mr-2"></i>BUY NOW</button>
+        </div>
+        <div>
+          <img src="asset/images/model.png" alt="">
+        </div>
+      </section>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>

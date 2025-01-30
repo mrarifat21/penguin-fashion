@@ -14,7 +14,13 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font-awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Tailwind Custome Fonts -->
     <script>
       tailwind.config = {
@@ -22,12 +28,16 @@
           extend: {
             colors: {
               clifford: "#da373d",
-              "primary-color":"#3E3E3E",
-              "heading-color": "#363958"
+              "primary-color": "#3E3E3E",
+              "heading-color": "#363958",
+              "product-bg": "#F1F1F1",
             },
             fontFamily: {
               roboto: ["Roboto", "serif"],
               bebas: ["Bebas Neue", "serif"],
+            },
+            boxShadow: {
+              "custom-shadow": "0px 10px 30px 0px rgba(0,0,0,0.05)",
             },
           },
         },
@@ -35,6 +45,7 @@
     </script>
   </head>
   <body>
+    <!-- header section -->
     <header class="bg-[#FFFBF0]">
       <!-- navbar  -->
       <nav class="flex justify-between pt-5 container mx-auto px-3 md:px-0">
@@ -46,18 +57,18 @@
           />
         </div>
         <div>
-          <ul class="hidden md:flex md:justify-between ">
+          <ul class="hidden md:flex md:justify-between">
             <li>
               <a
-                href="#"
+                href="#banner"
                 class="inline-block mx-3 font-roboto text-base font-semibold text-[#3c3c3c] hover:text-green-700"
                 >Home</a
               >
             </li>
             <li>
               <a
-                href="#"
-                class="inline-block mx-3 font-roboto text-base font-semibold text-[#3c3c3c] hover:text-green-700"
+                href="#product"
+                class="inline-block mx-3 font-roboto text-base font-semibold text-[#3c3c3c] hover:text-green-700 "
                 >Product</a
               >
             </li>
@@ -82,7 +93,9 @@
 
       <!-- banner -->
 
-      <section class="container mx-auto my-20 md:flex justify-between items-center px-3 md:px-0">
+      <section id="banner"
+        class="container mx-auto my-20 md:flex justify-between items-center px-3 md:px-0"
+      >
         <div class="mb-14 md:mb-0 text-center md:text-left">
           <h2 class="font-bebas text-6xl md:text-7xl">
             <span class="text-[#FABE4C]">Be the Penguins</span> <br />
@@ -92,14 +105,240 @@
             Lorem Ipsum is simply dummy text of the printing <br />
             and typesetting industry.
           </p>
-          <button class="font-roboto font-medium text-white bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl w-44 h-16 hover:from-[#85A019] hover:to-[#A4BC46]" > <i class="fa-solid fa-cart-shopping mr-2"></i>BUY NOW</button>
+          <button
+            class="font-roboto font-medium text-white bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl w-44 h-16 hover:from-[#85A019] hover:to-[#A4BC46]"
+          >
+            <i class="fa-solid fa-cart-shopping mr-2"></i>BUY NOW
+          </button>
         </div>
         <div>
-          <img src="asset/images/model.png" alt="">
+          <img src="asset/images/model.png" alt="" />
         </div>
       </section>
     </header>
-    <main></main>
+
+    <main>
+      <!-- Woman Jacket section -->
+      <section id="product" class="my-20 text-center md:text-left">
+        <div class="container mx-auto px-3 md:px-0">
+          <h2 class="font-bebas md:text-7xl text-6xl text-heading-color mb-2">
+            WOMAN JACKET
+          </h2>
+          <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- card one -->
+
+            <div
+              class="single-card my-10 mx-auto shadow-custom-shadow p-4 bg-white rounded-lg "
+            >
+              <div class="bg-product-bg p-5 rounded-3xl">
+                <img
+                  src="asset/images/jacket-1.png"
+                  alt=""
+                  class="border-2 border-[#bbb7b7] border-dashed"
+                />
+              </div>
+              <div class="">
+                <h3
+                  class="text-heading-color font-roboto text-2xl font-bold mt-4"
+                >
+                  Yellow Coat Jacket
+                </h3>
+                <p class="text-primary-color font-roboto my-3">
+                  Lorem Ipsum is simply dummy text of the <br />
+                  printing and typesetting industry.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-[#FABE4C] font-roboto font-black text-3xl"
+                    >$234</span
+                  >
+                  <button
+                    class="font-roboto font-medium text-white bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl w-40 h-14 hover:from-[#85A019] hover:to-[#A4BC46]"
+                  >
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- cards two -->
+            <div
+              class="single-card my-10 mx-auto shadow-custom-shadow gap-8 p-4 bg-white rounded-lg "
+            >
+              <div class="bg-product-bg p-5 rounded-3xl">
+                <img
+                  src="asset/images/jacket-2.png"
+                  alt=""
+                  class="border-2 border-[#bbb7b7] border-dashed"
+                />
+              </div>
+              <div class="">
+                <h3
+                  class="text-heading-color font-roboto text-2xl font-bold mt-4"
+                >
+                Ladies Jacket 
+                </h3>
+                <p class="text-primary-color font-roboto my-3">
+                  Lorem Ipsum is simply dummy text of the <br />
+                  printing and typesetting industry.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-[#FABE4C] font-roboto font-black text-3xl"
+                    >$234</span
+                  >
+                  <button
+                    class="font-roboto font-medium text-white bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl w-40 h-14 hover:from-[#85A019] hover:to-[#A4BC46]"
+                  >
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- cards three -->
+            <div
+              class="single-card my-10 mx-auto shadow-custom-shadow gap-8 p-4 bg-white rounded-lg "
+            >
+              <div class="bg-product-bg p-5 rounded-3xl">
+                <img
+                  src="asset/images/jacket-3.png"
+                  alt=""
+                  class="border-2 border-[#bbb7b7] border-dashed"
+                />
+              </div>
+              <div class="">
+                <h3
+                  class="text-heading-color font-roboto text-2xl font-bold mt-4"
+                >
+                Woman Leather Jacket 
+                </h3>
+                <p class="text-primary-color font-roboto my-3">
+                  Lorem Ipsum is simply dummy text of the <br />
+                  printing and typesetting industry.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-[#FABE4C] font-roboto font-black text-3xl"
+                    >$234</span
+                  >
+                  <button
+                    class="font-roboto font-medium text-white bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl w-40 h-14 hover:from-[#85A019] hover:to-[#A4BC46]"
+                  >
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+            <!-- Man Jacket section -->
+            <section class="my-20 text-center md:text-left">
+              <div class="container mx-auto px-3 md:px-0">
+                <h2 class="font-bebas md:text-7xl text-6xl text-heading-color mb-2">
+                  MAN JACKET
+                </h2>
+                <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <!-- card one -->
+      
+                  <div
+                    class="single-card my-10 mx-auto shadow-custom-shadow p-4 bg-white rounded-lg "
+                  >
+                    <div class="bg-product-bg p-5 rounded-3xl">
+                      <img
+                        src="asset/images/jacket-4.png"
+                        alt=""
+                        class="border-2 border-[#bbb7b7] border-dashed"
+                      />
+                    </div>
+                    <div class="">
+                      <h3
+                        class="text-heading-color font-roboto text-2xl font-bold mt-4"
+                      >
+                      Snowboard Jacket Mens
+                      </h3>
+                      <p class="text-primary-color font-roboto my-3">
+                        Lorem Ipsum is simply dummy text of the <br />
+                        printing and typesetting industry.
+                      </p>
+                      <div class="flex justify-between items-center">
+                        <span class="text-[#FABE4C] font-roboto font-black text-3xl"
+                          >$234</span
+                        >
+                        <button
+                          class="font-roboto font-medium text-white bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl w-40 h-14 hover:from-[#85A019] hover:to-[#A4BC46]"
+                        >
+                          <i class="fa-solid fa-cart-shopping mr-2"></i>BUY NOW
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- cards two -->
+                  <div
+                    class="single-card my-10 mx-auto shadow-custom-shadow gap-8 p-4 bg-white rounded-lg "
+                  >
+                    <div class="bg-product-bg p-5 rounded-3xl">
+                      <img
+                        src="asset/images/jacket-5.png"
+                        alt=""
+                        class="border-2 border-[#bbb7b7] border-dashed"
+                      />
+                    </div>
+                    <div class="">
+                      <h3
+                        class="text-heading-color font-roboto text-2xl font-bold mt-4"
+                      >
+                      Man Leather Jackets 
+                      </h3>
+                      <p class="text-primary-color font-roboto my-3">
+                        Lorem Ipsum is simply dummy text of the <br />
+                        printing and typesetting industry.
+                      </p>
+                      <div class="flex justify-between items-center">
+                        <span class="text-[#FABE4C] font-roboto font-black text-3xl"
+                          >$234</span
+                        >
+                        <button
+                          class="font-roboto font-medium text-white bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl w-40 h-14 hover:from-[#85A019] hover:to-[#A4BC46]"
+                        >
+                          <i class="fa-solid fa-cart-shopping mr-2"></i>BUY NOW
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- cards three -->
+                  <div
+                    class="single-card my-10 mx-auto shadow-custom-shadow gap-8 p-4 bg-white rounded-lg "
+                  >
+                    <div class="bg-product-bg p-5 rounded-3xl">
+                      <img
+                        src="asset/images/jacket-6.png"
+                        alt=""
+                        class="border-2 border-[#bbb7b7] border-dashed"
+                      />
+                    </div>
+                    <div class="">
+                      <h3
+                        class="text-heading-color font-roboto text-2xl font-bold mt-4"
+                      >
+                      Man Casual Jackets 
+                      </h3>
+                      <p class="text-primary-color font-roboto my-3">
+                        Lorem Ipsum is simply dummy text of the <br />
+                        printing and typesetting industry.
+                      </p>
+                      <div class="flex justify-between items-center">
+                        <span class="text-[#FABE4C] font-roboto font-black text-3xl"
+                          >$234</span
+                        >
+                        <button
+                          class="font-roboto font-medium text-white bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl w-40 h-14 hover:from-[#85A019] hover:to-[#A4BC46]"
+                        >
+                          <i class="fa-solid fa-cart-shopping mr-2"></i>BUY NOW
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+    </main>
     <footer></footer>
   </body>
 </html>
